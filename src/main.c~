@@ -1,0 +1,61 @@
+#include <stdlib.h>
+#include <math.h>
+
+
+
+int my_strlen(char *text);
+
+int my_strlen(char *text){
+
+  int i = 0;
+  
+  while(text[++i]);
+
+  return i;
+}
+
+
+int main(int ac, char **av){
+
+  int **matrix;
+  
+  if(ac!=3){
+    
+    
+  }else {
+
+    int counter = 0;
+    int length =  my_strlen(av[2]);
+    printf("Longueur de la cle : %i \n",length);
+
+    int lengthMatrix =  ceil(sqrt(length));
+    matrix = malloc(sizeof(int*)*lengthMatrix);
+
+    for(int j = 0; j < lengthMatrix; j++){
+      
+      for(int k = 0; k <lengthMatrix; k++){
+
+	if(counter < length){
+	  
+	  matrix[j][k] = av[2][counter];	
+	  counter ++;
+	  printf("%i ",matrix[j][k]);
+	}else{
+	  
+	  matrix[j][k] = 0;
+
+	}
+      }
+      printf("\n");
+    }
+
+    
+   
+   
+}
+
+
+
+ 
+return (0);
+}
