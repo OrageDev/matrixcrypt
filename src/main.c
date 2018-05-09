@@ -79,26 +79,27 @@ void MultiplyMatrix(int **matrixmessage, int **matrixmultiply,int **matrixcle, i
 
 	int **matrixX;
 	int **matrixY;
+	printf("nblignem : %i \nnbcolonnem : %i \nnblignec : %i \nnbcolonnec : %i\n\n",nblignem,nbcolonnem,nblignec,nbcolonnec);
+	matrixY = malloc(sizeof(int*)*nbcolonnem);
+	matrixX = malloc(sizeof(int*)*nblignem);
 
-
-	for(int i = i; i < 1; i ++){
+	for(int i = 0; i < 1; i ++){
 		printf("colonnes : \n");
-		matrixY[i] = malloc(sizeof(int)*nbcolonnec);
 
 		for(int j = 0; j < nbcolonnec; j++){
-
+			matrixY[j] = malloc(sizeof(int)*nbcolonnec);
 			matrixY[j][i] = matrixcle[j][i];
 			printf("%i\n",matrixY[j][i]);
 		}
 	}
 
-	for(int i = i; i < 1; i++){
+	for(int i = 0; i < 1; i++){
 		printf("Ligne : \n");
-		matrixX[i] = malloc(sizeof(int)*nblignem);
-		for(int j = 0; j < nblignem; j++){
 
+		for(int j = 0; j < nblignem; j++){
+			matrixX[j] = malloc(sizeof(int)*nblignem);
 			matrixX[i][j] = matrixmessage[i][j];
-			printf("%i\n",matrixX[i][j]);
+			printf("%i\t",matrixX[i][j]);
 		}
 	}
 }
