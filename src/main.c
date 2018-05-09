@@ -96,13 +96,17 @@ void MultiplyMatrix(int **matrixmessage, int **matrixmultiply,int **matrixcle, i
 	for(int i = 0; i < 1; i++){
 		printf("Ligne : \n");
 
-		for(int j = 0; j < nblignem; j++){
-			matrixX[j] = malloc(sizeof(int)*nblignem);
+		for(int j = 0; j < nblignec; j++){
+			printf("Avant malloc\n");
+			matrixX[j] = malloc(sizeof(int)*nblignec);
+			printf("Apres le malloc\n");
+			printf("Avant assignation à matrice : %i",matrixmessage[i][j]);
 			matrixX[i][j] = matrixmessage[i][j];
 			printf("%i\t",matrixX[i][j]);
 		}
 	}
 }
+
 
 
 
